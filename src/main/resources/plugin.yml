@@ -1,0 +1,13 @@
+name: MonumentWarsMinigame
+version: 1.0
+description: Who can prove that they are the best team!
+author: isokissa3
+website: https://joniaromaa.fi
+
+main: fi.joniaromaa.monumentwarsminigame.MonumentWarsPlugin
+depend: [MinigameFramework]
+
+commands:
+   shout:
+     description: Shout
+     permission: monumentwars.command.shout

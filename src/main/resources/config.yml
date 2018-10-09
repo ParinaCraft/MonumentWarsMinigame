@@ -1,0 +1,8 @@
+game:
+    concurrent-game-limit: 10
+
+minigame:
+    gametype: 2
+    team-size: 1
+    maps:
+    - Test
