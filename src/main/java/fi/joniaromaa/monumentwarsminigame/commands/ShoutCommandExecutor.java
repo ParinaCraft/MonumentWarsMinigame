@@ -39,7 +39,7 @@ public class ShoutCommandExecutor implements CommandExecutor
 							StringBuilder stringBuilder = new StringBuilder();
 							stringBuilder.append(ChatColor.GOLD)
 								.append("[SHOUT] ")
-								.append(user.getDataStorage(UserMonumentWarsStatsDataStorage.class).getPrefix())
+								.append(user.getDataStorage(UserMonumentWarsStatsDataStorage.class).get().getPrefix())
 								.append(' ')
 								.append(minigamePlayer.getTeam().getChatColor())
 								.append(user.getDisplayName())

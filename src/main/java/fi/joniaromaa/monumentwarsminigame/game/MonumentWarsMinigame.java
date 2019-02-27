@@ -293,10 +293,10 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 		super.start();
 		
 		this.sendMessage(ChatColor.AQUA + ChatColor.BOLD.toString() + "Monument" + ChatColor.GREEN + ChatColor.BOLD.toString() + "Wars");
-		this.sendMessage(ChatColor.YELLOW + "Tehtävänäsi on rikkoa vastustajan monumentit (End stone)");
-		this.sendMessage(ChatColor.YELLOW + "Kun kaikki monumentit on tuhottu vastustaja ei enään synny uudelleen");
-		this.sendMessage(ChatColor.YELLOW + "Vastustajan kuoltua peli päättyy");
-		this.sendMessage(ChatColor.YELLOW + "Keskipisteen valtaaminen antaa etuja pelien edetessä tiimille, jonka on sen vallannut");
+		this.sendMessage(ChatColor.YELLOW + "Tehtï¿½vï¿½nï¿½si on rikkoa vastustajan monumentit (End stone)");
+		this.sendMessage(ChatColor.YELLOW + "Kun kaikki monumentit on tuhottu vastustaja ei enï¿½ï¿½n synny uudelleen");
+		this.sendMessage(ChatColor.YELLOW + "Vastustajan kuoltua peli pï¿½ï¿½ttyy");
+		this.sendMessage(ChatColor.YELLOW + "Keskipisteen valtaaminen antaa etuja pelien edetessï¿½ tiimille, jonka on sen vallannut");
 	}
 	
 	@SuppressWarnings("deprecation")
@@ -309,25 +309,25 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 		{
 			if (this.timePlayed == 20 * 60 * 25) //25mins, Show warning about decrasing health
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Viiden minuutin päästä monumentit alkavat menettää elämäpisteitä hitaasti yhteen rikkomiskertaan asti");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Viiden minuutin pï¿½ï¿½stï¿½ monumentit alkavat menettï¿½ï¿½ elï¿½mï¿½pisteitï¿½ hitaasti yhteen rikkomiskertaan asti");
 			}
 			else if (this.timePlayed == 20 * 60 * 29) //29mins, Show warning about decrasing health
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Minuutin minuutin päästä monumentit alkavat menettää elämäpisteitä hitaasti yhteen rikkomiskertaan asti");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Minuutin minuutin pï¿½ï¿½stï¿½ monumentit alkavat menettï¿½ï¿½ elï¿½mï¿½pisteitï¿½ hitaasti yhteen rikkomiskertaan asti");
 			}
 			else if (this.timePlayed == 20 * 60 * 30) //30mins, show decreasing health warning
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Monumentit alkavat menettää elämäpisteitä pikkuhiljaa kunnes ne saavuttavat yhden rikkomiskerran");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Monumentit alkavat menettï¿½ï¿½ elï¿½mï¿½pisteitï¿½ pikkuhiljaa kunnes ne saavuttavat yhden rikkomiskerran");
 
 				this.getWorld().getPlayers().forEach((p) -> p.playSound(p.getLocation(), Sound.WITHER_IDLE, Integer.MAX_VALUE, 1));
 			}
 			else if (this.timePlayed == 20 * 60 * 40) //40mins, Show warning about deathmatch
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Viiden minuutin päästä monumentit tuhoutuvat itsestään");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Viiden minuutin pï¿½ï¿½stï¿½ monumentit tuhoutuvat itsestï¿½ï¿½n");
 			}
 			else if (this.timePlayed == 20 * 60 * 44) //44mins, Show warning about deathmatch
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Minuutin päästä monumentit tuhoutuvat itsestään");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Minuutin pï¿½ï¿½stï¿½ monumentit tuhoutuvat itsestï¿½ï¿½n");
 			}
 			else if (this.timePlayed == 20 * 60 * 45) //45min, start deathmatch
 			{
@@ -342,7 +342,7 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 					{
 						minigamePlayer.getBukkitPlayer().sendTitle(Title.builder()
 								.title(ChatColor.RED + "Deathmatch")
-								.subtitle("Et synny enään uudelleen")
+								.subtitle("Et synny enï¿½ï¿½n uudelleen")
 								.fadeIn(10)
 								.stay(40)
 								.fadeOut(10)
@@ -355,11 +355,11 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 			}
 			else if (this.timePlayed == 20 * 60 * 55) //55min, end game warning
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Viiden minuutin päästä peli päätty automaattisesti");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Viiden minuutin pï¿½ï¿½stï¿½ peli pï¿½ï¿½tty automaattisesti");
 			}
 			else if (this.timePlayed == 20 * 60 * 59) //59min, end game warning
 			{
-				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Minuutin päästä peli päätty automaattisesti");
+				this.sendMessage(ChatColor.YELLOW + ChatColor.BOLD.toString() + "Minuutin pï¿½ï¿½stï¿½ peli pï¿½ï¿½tty automaattisesti");
 			}
 			
 			if (this.timePlayed > 20 * 60 * 30) //After 30 mins, start slowly decreasing health
@@ -519,10 +519,10 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 					
 					this.sendTitle(Title.builder()
 							.title(ChatColor.GOLD + ChatColor.BOLD.toString() + "Tasapeli")
-							.subtitle(ChatColor.GREEN + "Peli on päättynyt!")
+							.subtitle(ChatColor.GREEN + "Peli on pï¿½ï¿½ttynyt!")
 							.build());
 
-					TextComponent playAgain = new TextComponent("Pelaa uudelleen! (Klikkaamatta tästä)");
+					TextComponent playAgain = new TextComponent("Pelaa uudelleen! (Klikkaamatta tï¿½stï¿½)");
 					playAgain.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("/queue monument_wars_6v6").create()));
 					playAgain.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/queue monument_wars_6v6"));
 					playAgain.setBold(true);
@@ -576,14 +576,14 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 						
 						((CraftPlayer)bukkitPlayer).getHandle().invulnerableTicks = Integer.MAX_VALUE;
 						
-						UserMonumentWarsStatsDataStorage stats = player.getUser().getDataStorage(UserMonumentWarsStatsDataStorage.class);
+						UserMonumentWarsStatsDataStorage stats = player.getUser().getDataStorage(UserMonumentWarsStatsDataStorage.class).get();
 
 						if (bukkitPlayer.isOp() || stats.getFinalKillsRank() <= 10 || stats.getWinsRank() <= 10 || stats.getTotalExpRank() <= 10)
 						{
 							EnderDragon enderDragon = this.getWorld().spawn(bukkitPlayer.getLocation(), EnderDragon.class);
 							enderDragon.setPassenger(bukkitPlayer);
 							enderDragon.setCustomNameVisible(true);
-							enderDragon.setCustomName(winner.getChatColor() + ChatColor.BOLD.toString() + player.getUser().getDisplayName() + " ebun drägÃ¶n!");
+							enderDragon.setCustomName(winner.getChatColor() + ChatColor.BOLD.toString() + player.getUser().getDisplayName() + " ebun drï¿½gÃ¶n!");
 							enderDragon.setNoDamageTicks(Integer.MAX_VALUE);
 						}
 					}
@@ -593,7 +593,7 @@ public class MonumentWarsMinigame extends AbstractMinigame<MonumentWarsMinigameT
 							.subtitle(ChatColor.GREEN + "on voittanut pelin!")
 							.build());
 					
-					TextComponent playAgain = new TextComponent("Pelaa uudelleen! (Klikkaamatta tästä)");
+					TextComponent playAgain = new TextComponent("Pelaa uudelleen! (Klikkaamatta tï¿½stï¿½)");
 					playAgain.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder("/queue monument_wars_6v6").create()));
 					playAgain.setClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/queue monument_wars_6v6"));
 					playAgain.setBold(true);

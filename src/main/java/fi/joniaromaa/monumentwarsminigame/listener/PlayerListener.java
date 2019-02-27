@@ -116,7 +116,7 @@ public class PlayerListener implements Listener
 				}
 				else
 				{
-					user = ParinaCore.getApi().getUserManager().getUser(player.getUniqueId());
+					user = ParinaCore.getApi().getUserManager().getUser(player.getUniqueId()).orElse(null);
 				}
 				
 				StringBuilder stringBuilder = new StringBuilder();
@@ -185,7 +185,7 @@ public class PlayerListener implements Listener
 					}
 				}
 				
-				UserMonumentWarsStatsDataStorage stats = user != null ? user.getDataStorage(UserMonumentWarsStatsDataStorage.class) : null;
+				UserMonumentWarsStatsDataStorage stats = user != null ? user.getDataStorage(UserMonumentWarsStatsDataStorage.class).orElse(null) : null;
 				if (stats != null)
 				{
 					stringBuilder.append(stats.getPrefix())
@@ -246,7 +246,7 @@ public class PlayerListener implements Listener
 						ItemMeta meta = itemStack.getItemMeta();
 						if (meta.getDisplayName() != null)
 						{
-							UserPreferedMinigameTeamDataStorage storage = bukkitUser.getUser().getDataStorage(UserPreferedMinigameTeamDataStorage.class);
+							UserPreferedMinigameTeamDataStorage storage = bukkitUser.getUser().getDataStorage(UserPreferedMinigameTeamDataStorage.class).orElse(null);
 							if (storage == null || !storage.getTeam().equals(meta.getDisplayName()))
 							{
 								bukkitUser.getUser().setDataStorage(new UserPreferedMinigameTeamDataStorage(ChatColor.stripColor(meta.getDisplayName())));

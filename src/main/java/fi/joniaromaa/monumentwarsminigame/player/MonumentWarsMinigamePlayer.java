@@ -110,7 +110,7 @@ public class MonumentWarsMinigamePlayer extends AbstractMinigamePlayer<MonumentW
 			this.giveArrowCounter = 0;
 			this.respawnTime = 60; //3s
 			
-			bukkitPlayer.sendMessage(ChatColor.YELLOW + "Synnytään uudelleen kolmessa sekunnissa");
+			bukkitPlayer.sendMessage(ChatColor.YELLOW + "Synnytï¿½ï¿½n uudelleen kolmessa sekunnissa");
 			
 			this.getGame().makeSpectator(this.getBukkitPlayer());
 		}
@@ -233,7 +233,7 @@ public class MonumentWarsMinigamePlayer extends AbstractMinigamePlayer<MonumentW
 	
 	public int getLevel()
 	{
-		UserMonumentWarsStatsDataStorage stats = this.getUser().getDataStorage(UserMonumentWarsStatsDataStorage.class);
+		UserMonumentWarsStatsDataStorage stats = this.getUser().getDataStorage(UserMonumentWarsStatsDataStorage.class).orElse(null);
 		if (stats != null)
 		{
 			return stats.getLevel();
